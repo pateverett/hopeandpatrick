@@ -132,10 +132,29 @@ body {
 }
 
 /* Enter gate */
-.enter-btn {
+.enter-form {
   display: none;
-  align-self: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
   margin-top: 44px;
+}
+.enter-form input[type="password"] {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(34, 38, 46, 0.3);
+  padding: 12px 4px;
+  width: 160px;
+}
+.enter-form input[type="password"]:focus-visible {
+  outline: none;
+  border-bottom-color: var(--ink);
+}
+.enter-btn {
   font-family: 'Inter', sans-serif;
   font-size: 11px;
   letter-spacing: 0.18em;
@@ -147,8 +166,15 @@ body {
   cursor: pointer;
 }
 .enter-btn:hover { background: var(--brass); color: var(--stone); }
+.enter-error {
+  flex-basis: 100%;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  color: #a33b3b;
+}
 
-.pre-enter .enter-btn { display: inline-block; }
+.pre-enter .enter-form { display: flex; }
 .pre-enter .hero { min-height: 100vh; }
 .pre-enter .site-nav .links,
 .pre-enter .nav-toggle,
@@ -400,6 +426,11 @@ body {
   .enter-btn, .btn { transition: background 0.2s ease, color 0.2s ease, opacity 0.2s ease; }
   .gallery-item img { transition: opacity 0.2s ease; }
   .lightbox-close, .lightbox-nav { transition: opacity 0.2s ease; }
+  .enter-form.shake { animation: shake 0.3s ease; }
+}
+@keyframes shake {
+  25% { transform: translateX(-6px); }
+  75% { transform: translateX(6px); }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

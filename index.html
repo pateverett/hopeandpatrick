@@ -14,7 +14,12 @@ title: Home
       <div><div class="num" data-unit="hours">–</div><div class="label">Hours</div></div>
       <div><div class="num" data-unit="minutes">–</div><div class="label">Minutes</div></div>
     </div>
-    <button class="enter-btn" id="enter-btn" type="button">Enter</button>
+    <form class="enter-form" id="enter-form" data-hash="{{ site.password_hash }}" autocomplete="off">
+      <label for="enter-password" class="sr-only">Password</label>
+      <input type="password" id="enter-password" name="password" placeholder="Password" autocomplete="off" required>
+      <button class="enter-btn" type="submit">Enter</button>
+      <p class="enter-error" id="enter-error" hidden>Incorrect password - please try again.</p>
+    </form>
   </div>
 </section>
 
@@ -34,7 +39,7 @@ title: Home
         <span class="event-dress">Cocktail</span>
       </div>
       <p class="event-meta">Friday, May 21 &middot; 7:00&ndash;10:00 PM &middot; Bistro du Midi</p>
-      <p class="event-desc">Join us the evening before the wedding for a relaxed night of drinks and dinner overlooking the Public Garden — a chance to catch up before the weekend gets underway.</p>
+      <p class="event-desc">Join us the evening before the wedding for a relaxed night of drinks and dinner overlooking the Public Garden - a chance to catch up before the weekend gets underway.</p>
     </div>
 
     <div class="event">
@@ -102,8 +107,8 @@ title: Home
     <h3 class="subhead">Getting to Boston</h3>
     <p>Fly into Boston Logan International Airport (BOS). From there:</p>
     <ul class="plain-list">
-      <li><strong>Rideshare or taxi</strong> — Uber, Lyft, and taxis run continuously from Logan into the city, about 15&ndash;20 minutes to Back Bay.</li>
-      <li><strong>Back Bay Shuttle</strong> — a direct shuttle service is also available from the airport to Back Bay.</li>
+      <li><strong>Rideshare or taxi</strong> - Uber, Lyft, and taxis run continuously from Logan into the city, about 15&ndash;20 minutes to Back Bay.</li>
+      <li><strong>Back Bay Shuttle</strong> - a direct shuttle service is also available from the airport to Back Bay.</li>
     </ul>
 
     <h3 class="subhead">By Train</h3>
@@ -129,7 +134,7 @@ title: Home
       </details>
       <details class="faq-item">
         <summary>Will the wedding be indoors or outdoors?</summary>
-        <p>Both — the ceremony and reception will move between indoor and outdoor spaces at the Library, so we'd suggest dressing for the weather as well as the occasion.</p>
+        <p>Both. The ceremony and reception will move between indoor and outdoor spaces at the Library, so we'd suggest dressing for the weather as well as the occasion.</p>
       </details>
       <details class="faq-item">
         <summary>What time should we arrive?</summary>

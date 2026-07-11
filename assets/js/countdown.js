@@ -56,14 +56,41 @@
   }
 
   function initGate() {
-    var enterBtn = document.getElementById("enter-btn");
-    if (!enterBtn) return;
+    var form = document.getElementById("enter-form");
+    if (!form) return;
 
-    enterBtn.addEventListener("click", function () {
-      document.documentElement.classList.remove("pre-enter");
-      try {
-        sessionStorage.setItem("hp-entered", "true");
-      } catch (e) {}
+    var input = document.getElementById("enter-password");
+    var error = document.getElementById("enter-error");
+    var expectedHash = form.getAttribute("data-hash");
+
+    async function hash(text) {
+      var data = new TextEncoder().encode(text);
+      var digest = await crypto.subtle.digest("SHA-256", data);
+      return Array.prototype.map
+        .call(new Uint8Array(digest), function (b) {
+          return b.toString(16).padStart(2, "0");
+        })
+        .join("");
+    }
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      hash(input.value).then(function (result) {
+        if (result === expectedHash) {
+          document.documentElement.classList.remove("pre-enter");
+          try {
+            sessionStorage.setItem("hp-entered", "true");
+          } catch (e) {}
+        } else {
+          error.hidden = false;
+          input.value = "";
+          input.focus();
+          form.classList.remove("shake");
+          void form.offsetWidth;
+          form.classList.add("shake");
+        }
+      });
     });
   }
 
