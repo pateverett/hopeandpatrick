@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hope & Patrick — Refined Direction Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --stone: #EDE8E0;
+    --ink: #22262E;
+    --lilac: #C9B8D8;
+    --brass: #A98B57;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--stone);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 48px;
+  }
+  nav .mark {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    letter-spacing: 0.08em;
+  }
+  nav .links { display: flex; gap: 36px; }
+  nav a {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: none;
+    opacity: 0.7;
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 82vh;
+  }
+  .hero-image {
+    background:
+      linear-gradient(180deg, rgba(34,38,46,0.05) 0%, rgba(34,38,46,0.45) 100%),
+      repeating-linear-gradient(100deg, #d8d2c6 0px, #d8d2c6 3px, #c6bfae 3px, #c6bfae 6px);
+    background-blend-mode: multiply;
+  }
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 64px;
+  }
+  .hero-note {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--brass);
+    margin-bottom: 20px;
+  }
+  .hero-text h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: clamp(44px, 6vw, 84px);
+    line-height: 0.98;
+  }
+  .hero-text h1 .amp {
+    display: block;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--lilac);
+    font-size: 0.6em;
+    margin: 6px 0;
+  }
+  .hero-text .meta {
+    margin-top: 28px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    line-height: 1.9;
+    opacity: 0.75;
+  }
+  .countdown { display: flex; gap: 32px; margin-top: 40px; }
+  .countdown div { text-align: left; }
+  .countdown .num {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 32px;
+  }
+  .countdown .label {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0.6;
+    margin-top: 4px;
+  }
+
+  /* REFINED MOTIF: a slim dentil / cornice line, echoing BPL's classical facade detailing,
+     with a single small lilac mark as the only color accent — no floral spray. */
+  .motif {
+    display: flex;
+    justify-content: center;
+    padding: 44px 0;
+  }
+  .motif svg { width: 220px; height: auto; }
+
+  /* STORY: no full-bleed wash — just a thin lilac rule under the heading */
+  .story { padding: 90px 24px; }
+  .story-inner { max-width: 640px; margin: 0 auto; }
+  .story .eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--brass);
+    margin-bottom: 14px;
+    text-align: center;
+  }
+  .story h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 38px;
+    text-align: center;
+  }
+  .story .rule {
+    width: 28px;
+    height: 2px;
+    background: var(--lilac);
+    margin: 22px auto 36px;
+  }
+  .story p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.85;
+    color: rgba(34,38,46,0.75);
+  }
+  .story .dropcap {
+    float: left;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 72px;
+    line-height: 0.8;
+    padding: 4px 10px 0 0;
+    color: var(--ink);
+  }
+
+  .caption {
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    color: rgba(34,38,46,0.55);
+    padding: 30px 24px 60px;
+  }
+
+  @media (max-width: 800px) {
+    .hero { grid-template-columns: 1fr; }
+    .hero-image { min-height: 40vh; }
+  }
+</style>
+</head>
+<body>
+
+  <nav>
+    <div class="mark">H &amp; P</div>
+    <div class="links">
+      <a href="#">Home</a>
+      <a href="#">Schedule</a>
+      <a href="#">Gallery</a>
+      <a href="#">Travel</a>
+      <a href="#">FAQ</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-image"></div>
+    <div class="hero-text">
+      <div class="hero-note">The Boston Public Library</div>
+      <h1>Hope<span class="amp">&amp;</span>Patrick</h1>
+      <div class="meta">SATURDAY · MAY 2027<br>COPLEY SQUARE, BOSTON</div>
+      <div class="countdown">
+        <div><div class="num">294</div><div class="label">Days</div></div>
+        <div><div class="num">08</div><div class="label">Hours</div></div>
+        <div><div class="num">42</div><div class="label">Minutes</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="motif">
+    <!-- slim dentil / cornice line, referencing BPL's classical entablature detailing -->
+    <svg viewBox="0 0 220 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="4" x2="220" y2="4" stroke="#A98B57" stroke-width="1"/>
+      <line x1="0" y1="9" x2="220" y2="9" stroke="#A98B57" stroke-width="1"/>
+      <!-- dentil blocks -->
+      <g fill="#A98B57">
+        <rect x="6"  y="9" width="6" height="7"/>
+        <rect x="20" y="9" width="6" height="7"/>
+        <rect x="34" y="9" width="6" height="7"/>
+        <rect x="48" y="9" width="6" height="7"/>
+        <rect x="62" y="9" width="6" height="7"/>
+        <rect x="76" y="9" width="6" height="7"/>
+        <rect x="90" y="9" width="6" height="7"/>
+        <!-- single lilac accent block, centered, replaces one dentil -->
+        <rect x="104" y="9" width="6" height="7" fill="#C9B8D8"/>
+        <rect x="124" y="9" width="6" height="7"/>
+        <rect x="138" y="9" width="6" height="7"/>
+        <rect x="152" y="9" width="6" height="7"/>
+        <rect x="166" y="9" width="6" height="7"/>
+        <rect x="180" y="9" width="6" height="7"/>
+        <rect x="194" y="9" width="6" height="7"/>
+        <rect x="208" y="9" width="6" height="7"/>
+      </g>
+    </svg>
+  </div>
+
+  <section class="story">
+    <div class="story-inner">
+      <div class="eyebrow">Our Story</div>
+      <h2>How It Began</h2>
+      <div class="rule"></div>
+      <p><span class="dropcap">W</span>e met on an ordinary afternoon that turned out to be anything but — this is where your real story goes. Lilac now shows up only as a small rule beneath the heading and a single accent block in the cornice motif above, instead of owning a whole section.</p>
+    </div>
+  </section>
+
+  <div class="motif">
+    <svg viewBox="0 0 220 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="4" x2="220" y2="4" stroke="#A98B57" stroke-width="1"/>
+      <line x1="0" y1="9" x2="220" y2="9" stroke="#A98B57" stroke-width="1"/>
+      <g fill="#A98B57">
+        <rect x="6"  y="9" width="6" height="7"/>
+        <rect x="20" y="9" width="6" height="7"/>
+        <rect x="34" y="9" width="6" height="7"/>
+        <rect x="48" y="9" width="6" height="7"/>
+        <rect x="62" y="9" width="6" height="7"/>
+        <rect x="76" y="9" width="6" height="7"/>
+        <rect x="90" y="9" width="6" height="7"/>
+        <rect x="104" y="9" width="6" height="7" fill="#C9B8D8"/>
+        <rect x="124" y="9" width="6" height="7"/>
+        <rect x="138" y="9" width="6" height="7"/>
+        <rect x="152" y="9" width="6" height="7"/>
+        <rect x="166" y="9" width="6" height="7"/>
+        <rect x="180" y="9" width="6" height="7"/>
+        <rect x="194" y="9" width="6" height="7"/>
+        <rect x="208" y="9" width="6" height="7"/>
+      </g>
+    </svg>
+  </div>
+
+  <p class="caption">Motif is now a dentil/cornice line (echoing BPL's classical entablature) with one lilac block standing in for a single dentil — quieter and more architectural than the arch+sprig version. Story section drops the lilac wash entirely; lilac now only appears as a thin rule and that single motif accent.</p>
+
+</body>
+</html>

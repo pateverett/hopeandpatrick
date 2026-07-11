@@ -1,13 +1,129 @@
-<div class="bgimg">
-    <div class="middle">
-      <h1>COMING SOON</h1>
-      <hr>
-      <p>5.22.27</p>
+---
+layout: default
+title: Home
+---
+
+<section id="home" class="hero">
+  <div class="hero-image" style="background-image: url('{{ '/assets/hero.jpg' | relative_url }}');"></div>
+  <div class="hero-text">
+    <div class="hero-note">{{ site.wedding.eyebrow }}</div>
+    <h1>Hope<span class="amp">&amp;</span>Patrick</h1>
+    <div class="meta">{{ site.wedding.date_display | upcase }}<br>{{ site.wedding.venue | upcase }}</div>
+    <div class="countdown" id="countdown" data-target="{{ site.wedding.countdown_target }}">
+      <div><div class="num" data-unit="days">–</div><div class="label">Days</div></div>
+      <div><div class="num" data-unit="hours">–</div><div class="label">Hours</div></div>
+      <div><div class="num" data-unit="minutes">–</div><div class="label">Minutes</div></div>
     </div>
-    <div class="bottomleft">
-      <p>freshhotbagels</p>
+    <button class="enter-btn" id="enter-btn" type="button">Enter</button>
+  </div>
+</section>
+
+<div class="site-content" id="site-content">
+
+{% include motif.html %}
+
+<section id="schedule" class="section">
+  <div class="section-inner">
+    <div class="eyebrow">May 21&ndash;22, 2027</div>
+    <h2>Schedule</h2>
+    <div class="rule"></div>
+
+    <div class="event">
+      <div class="event-heading">
+        <h3>Welcome Party</h3>
+        <span class="event-dress">Semi-formal</span>
+      </div>
+      <p class="event-meta">Friday, May 21 &middot; 7:00&ndash;10:00 PM &middot; Bistro du Midi</p>
+      <p class="event-desc">Join us the evening before the wedding for a relaxed night of drinks and dinner overlooking the Public Garden — a chance to catch up before the weekend gets underway.</p>
+    </div>
+
+    <div class="event">
+      <div class="event-heading">
+        <h3>Wedding Day</h3>
+        <span class="event-dress">Black tie</span>
+      </div>
+      <p class="event-meta">Saturday, May 22 &middot; 6:00&ndash;11:00 PM &middot; Boston Public Library</p>
+      <p class="event-desc">Ceremony and reception, indoors and out, at the Boston Public Library in Copley Square. Please plan to arrive by 6:00 PM.</p>
     </div>
   </div>
-  <head>
-    <link rel="stylesheet" href="styles.css">
-  </head>
+</section>
+
+{% include motif.html %}
+
+<section id="gallery" class="section">
+  <div class="section-inner section-inner--wide">
+    <div class="eyebrow">A Few Favorites</div>
+    <h2>Gallery</h2>
+    <div class="rule"></div>
+
+    <div class="gallery-grid">
+      <img src="{{ '/assets/gallery/web/PH-006.jpeg' | relative_url }}" alt="Hope and Patrick's engagement" loading="lazy">
+      <img src="{{ '/assets/gallery/web/IMG_7490.jpeg' | relative_url }}" alt="Hope and Patrick" loading="lazy">
+      <img src="{{ '/assets/gallery/web/IMG_6167.jpeg' | relative_url }}" alt="Hope and Patrick" loading="lazy">
+      <img src="{{ '/assets/gallery/web/IMG_6177.jpeg' | relative_url }}" alt="Hope and Patrick" loading="lazy">
+      <img src="{{ '/assets/gallery/web/IMG_6045.jpeg' | relative_url }}" alt="Hope and Patrick" loading="lazy">
+    </div>
+  </div>
+</section>
+
+{% include motif.html %}
+
+<section id="travel" class="section">
+  <div class="section-inner">
+    <div class="eyebrow">Travel &amp; Accommodations</div>
+    <h2>Getting Here</h2>
+    <div class="rule"></div>
+
+    <h3 class="subhead">Room Blocks</h3>
+    <p>We've arranged discounted rooms at three hotels, all within walking distance of the wedding weekend's events:</p>
+    <ul class="hotel-list">
+      <li><span class="hotel-name">Raffles Boston</span> <span class="todo">TODO: booking link/code</span></li>
+      <li><span class="hotel-name">Fairmont Copley Plaza</span> <span class="todo">TODO: booking link/code</span></li>
+      <li><span class="hotel-name">Boston Marriott Copley Place</span> <span class="todo">TODO: booking link/code</span></li>
+    </ul>
+
+    <h3 class="subhead">Getting to Boston</h3>
+    <p>Fly into Boston Logan International Airport (BOS). From there:</p>
+    <ul class="plain-list">
+      <li><strong>Rideshare or taxi</strong> — Uber, Lyft, and taxis run continuously from Logan into the city, about 15&ndash;20 minutes to Back Bay.</li>
+      <li><strong>Back Bay Shuttle</strong> — a direct shuttle service is also available from the airport to Back Bay.</li>
+    </ul>
+
+    <h3 class="subhead">By Train</h3>
+    <p>Amtrak service into Back Bay Station puts you within walking distance of all three hotels.</p>
+
+    <h3 class="subhead">By Car</h3>
+    <p>Boston is easily reached by car via I-90 and I-93. All three hotels offer valet or nearby parking.</p>
+  </div>
+</section>
+
+{% include motif.html %}
+
+<section id="faq" class="section">
+  <div class="section-inner">
+    <div class="eyebrow">Good to Know</div>
+    <h2>Frequently Asked Questions</h2>
+    <div class="rule"></div>
+
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>What's the dress code?</summary>
+        <p>Semi-formal for the welcome party on Friday, black tie for the wedding on Saturday.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Will the wedding be indoors or outdoors?</summary>
+        <p>Both — the ceremony and reception will move between indoor and outdoor spaces at the Library, so we'd suggest dressing for the weather as well as the occasion.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What time should we arrive?</summary>
+        <p>Please plan to arrive by 6:00 PM on Saturday so we can begin promptly.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Are kids welcome?</summary>
+        <p>We love your little ones, but our wedding will be an adults-only celebration. We hope this gives you an opportunity for a night off to celebrate with us.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+</div>

@@ -1,0 +1,28 @@
+title: Hope & Patrick
+description: "Join us May 22, 2027 at the Boston Public Library."
+url: "https://hopeandpatrick.com"
+
+markdown: kramdown
+permalink: pretty
+
+collections_dir: .
+
+exclude:
+  - claude-code-handoff.md
+  - refined-direction-preview.html
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - assets/hp.jpeg
+  - assets/bpl.jpg
+  - assets/gallery/IMG_6045.jpeg
+  - assets/gallery/IMG_6167.jpeg
+  - assets/gallery/IMG_6177.jpeg
+  - assets/gallery/IMG_7490.jpeg
+  - assets/gallery/PH-006.jpeg
+
+wedding:
+  date_display: "Saturday, May 22, 2027"
+  venue: "The Boston Public Library"
+  eyebrow: "Boston, MA"
+  countdown_target: "2027-05-22T18:00:00-04:00"
