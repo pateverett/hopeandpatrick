@@ -67,9 +67,66 @@
     });
   }
 
+  function initGallery() {
+    var grid = document.getElementById("gallery-grid");
+    var lightbox = document.getElementById("lightbox");
+    if (!grid || !lightbox) return;
+
+    var items = Array.prototype.slice.call(grid.querySelectorAll(".gallery-item"));
+    var image = document.getElementById("lightbox-image");
+    var closeBtn = document.getElementById("lightbox-close");
+    var prevBtn = document.getElementById("lightbox-prev");
+    var nextBtn = document.getElementById("lightbox-next");
+    var currentIndex = 0;
+    var lastFocused = null;
+
+    function show(index) {
+      currentIndex = (index + items.length) % items.length;
+      var img = items[currentIndex].querySelector("img");
+      image.src = img.src;
+      image.alt = img.alt;
+    }
+
+    function open(index) {
+      lastFocused = document.activeElement;
+      show(index);
+      lightbox.hidden = false;
+      closeBtn.focus();
+      document.body.style.overflow = "hidden";
+    }
+
+    function close() {
+      lightbox.hidden = true;
+      document.body.style.overflow = "";
+      if (lastFocused) lastFocused.focus();
+    }
+
+    items.forEach(function (item, index) {
+      item.addEventListener("click", function () {
+        open(index);
+      });
+    });
+
+    closeBtn.addEventListener("click", close);
+    prevBtn.addEventListener("click", function () { show(currentIndex - 1); });
+    nextBtn.addEventListener("click", function () { show(currentIndex + 1); });
+
+    lightbox.addEventListener("click", function (event) {
+      if (event.target === lightbox) close();
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (lightbox.hidden) return;
+      if (event.key === "Escape") close();
+      if (event.key === "ArrowLeft") show(currentIndex - 1);
+      if (event.key === "ArrowRight") show(currentIndex + 1);
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     initCountdown();
     initNavToggle();
     initGate();
+    initGallery();
   });
 })();
