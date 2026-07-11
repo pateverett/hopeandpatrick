@@ -20,6 +20,13 @@ exclude:
   - assets/gallery/IMG_6177.jpeg
   - assets/gallery/IMG_7490.jpeg
   - assets/gallery/PH-006.jpeg
+  - assets/gallery/IMG_6758.jpeg
+  - assets/gallery/skating.jpeg
+  - assets/PH-0526.JPG
+  - assets/gallery/FullSizeRender.heic
+  - assets/gallery/IMG_7142.heic
+  - assets/gallery/IMG_8538.heic
+  - assets/gallery/IMG_8937.JPG
 
 wedding:
   date_display: "Saturday, May 22, 2027"
