@@ -300,18 +300,25 @@ body {
 
 /* Standalone pages (RSVP / Registry) */
 .standalone { min-height: 60vh; display: flex; align-items: center; }
-.placeholder-note { margin-top: 28px; text-align: center; }
-.cta {
+.standalone .section-inner { text-align: center; }
+.cta-wrap { margin-top: 28px; }
+.btn {
   display: inline-block;
   font-family: 'Inter', sans-serif;
   font-size: 12px;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--ink);
+  color: var(--stone);
+  background: var(--brass);
   text-decoration: none;
-  border-bottom: 1px solid var(--brass);
-  padding-bottom: 4px;
+  padding: 16px 38px;
 }
+.btn:hover { opacity: 0.88; }
+.btn:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+.standalone .motif { padding-top: 44px; padding-bottom: 0; }
 
 /* Footer */
 .site-footer {
@@ -328,8 +335,8 @@ body {
 /* Motion */
 @media (prefers-reduced-motion: no-preference) {
   html { scroll-behavior: smooth; }
-  .site-nav a, .cta { transition: opacity 0.2s ease; }
-  .enter-btn { transition: background 0.2s ease, color 0.2s ease; }
+  .site-nav a { transition: opacity 0.2s ease; }
+  .enter-btn, .btn { transition: background 0.2s ease, color 0.2s ease, opacity 0.2s ease; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
