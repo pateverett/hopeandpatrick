@@ -353,12 +353,19 @@ body {
 }
 .hotel-list li:first-child, .plain-list li:first-child { padding-top: 0; }
 .hotel-name { font-weight: 500; margin-right: 10px; }
-.todo {
+.hotel-link {
   font-size: 11px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--brass);
-  opacity: 0.8;
+  text-decoration: none;
+  border-bottom: 1px solid var(--brass);
+  padding-bottom: 2px;
+}
+.hotel-link:hover { opacity: 0.75; }
+.hotel-link:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
 }
 .plain-list li { border-bottom: none; padding: 8px 0; }
 
@@ -426,6 +433,7 @@ body {
   .enter-btn, .btn { transition: background 0.2s ease, color 0.2s ease, opacity 0.2s ease; }
   .gallery-item img { transition: opacity 0.2s ease; }
   .lightbox-close, .lightbox-nav { transition: opacity 0.2s ease; }
+  .hotel-link { transition: opacity 0.2s ease; }
   .enter-form.shake { animation: shake 0.3s ease; }
 }
 @keyframes shake {
