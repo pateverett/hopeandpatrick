@@ -7,14 +7,14 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { scroll-behavior: smooth; overflow-x: hidden; scroll-padding-top: 72px; }
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
 
 body {
   background: var(--stone);
   color: var(--ink);
   font-family: 'DM Sans', sans-serif;
   font-weight: 300;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 .sr-only {
