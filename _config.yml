@@ -36,4 +36,4 @@ wedding:
 
 # SHA-256 hash of the site password (client-side gate only — not real security,
 # see conversation notes). Regenerate with: printf '<password>' | shasum -a 256
-password_hash: "4b03f74e95d71ded4d9110dbd7ceac80c334f1a33be3e1012957d583b0ba56fb"
+password_hash: "e6da4c233ffc891259e88f985f938ec2f605bf549ca410e5740d28f2bd65e5e9"
