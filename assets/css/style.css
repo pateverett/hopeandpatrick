@@ -205,12 +205,13 @@ main { overflow-x: clip; }
 .motif {
   display: flex;
   justify-content: center;
-  padding: 44px 0;
+  padding: 20px 24px 44px;
 }
-.motif svg { width: 220px; height: auto; }
+.motif img { width: 480px; max-width: 100%; height: auto; }
 
 /* Section shell */
 .section { padding: 90px 24px; }
+#faq { padding-bottom: 40px; }
 .section-inner { max-width: 640px; margin: 0 auto; }
 .section-inner--wide { max-width: 960px; }
 .section .eyebrow {
@@ -497,6 +498,7 @@ main { overflow-x: clip; }
   .site-nav .links a { padding: 16px 24px; border-bottom: 1px solid rgba(34,38,46,0.08); }
 
   .section { padding: 64px 20px; }
+  .motif { padding: 16px 20px 32px; }
 
   .lightbox-close { top: 16px; right: 16px; font-size: 28px; }
   .lightbox-nav { font-size: 22px; padding: 8px; }
