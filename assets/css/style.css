@@ -256,14 +256,16 @@ main { overflow-x: clip; }
 .event:last-child { margin-bottom: 0; }
 .event-heading {
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
   justify-content: space-between;
-  gap: 16px;
+  gap: 8px 16px;
 }
 .event-heading h3 {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 500;
   font-size: 26px;
+  min-width: 0;
 }
 .event-dress {
   font-family: 'DM Sans', sans-serif;
